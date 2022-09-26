@@ -14,17 +14,19 @@ class MainActivity : AppCompatActivity() {
 
     fun onSumar(view: View) {
         contador++
-        val texto = findViewById<TextView>(R.id.contador)
-        texto.text = contador.toString()
+        changeCounter()
     }
     fun onMinimizar(view: View) {
         contador--
-        val texto = findViewById<TextView>(R.id.contador)
-        texto.text = contador.toString()
+        changeCounter()
     }
 
     fun onReset(view: View) {
         contador = 0
+        changeCounter()
+    }
+
+    private fun changeCounter() {
         val texto = findViewById<TextView>(R.id.contador)
         texto.text = contador.toString()
     }
